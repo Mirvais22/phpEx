@@ -8,9 +8,9 @@ use App\Models\Comment;
 class CommentController extends Controller
 {
     public function GetAllComments() {
-        $coms = Comment::all();
-        if($coms)
-            return Response()->json([$coms], 201);
+        $tr = Comment::all();
+        if($tr)
+            return Response()->json([$tr], 201);
         else
             return Response()->json([], 204);
     }
